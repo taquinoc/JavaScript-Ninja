@@ -41,3 +41,14 @@ function divisao(num1, num2){
 // Invoque a função criada acima, passando os parâmetros 10 e 2.
 divisao(10,2);
 
+function bhaskara(a, b, c){
+  
+  delta = (Math.pow(b,2)-4)*a*c;
+
+  x = (-b+Math.sqrt(b^2 - delta))/2*a;
+
+  x2 = (-b-Math.sqrt(b^2 - delta))/2*a;
+  
+  return console.log('Bhaskara é x '+ x +' e x2 '+ x2);
+};
+
