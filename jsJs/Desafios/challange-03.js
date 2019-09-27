@@ -86,7 +86,7 @@ Crie um método chamado `nomeCompleto`, que retorne a frase:
 */
 
 pessoa.nomeCompleto = function () {
-    return "Olá! Meu nome é "+ pessoa.nome + ' ' + pessoa.sobrenome;
+    return pessoa.nome + ' ' + pessoa.sobrenome;
 };
 
 
@@ -230,16 +230,23 @@ correta, de acordo com os dados inseridos no objeto.
 */
 
 pessoa.apresentacao = function () {
+    sexo = "o";
+    idade = "anos";
+    metros = "metros";
 
-    if(pessoa.sexo === 'Feminino'){
-        return "Olá, eu sou a "+pessoa.nomeCompleto+", tenho "+pessoa.idade+"anos, "+pessoa.altura+", meu peso é "+pessoa.peso+" e, só hoje, eu já caminhei "+pessoa.caminhouQuantosMetros+"metros!";
+    if(pessoa.sexo === "Feminino"){
+        sexo = "a";
     }
-    else if (pessoa.idade === 1){
-        return "Olá, eu sou a "+pessoa.nomeCompleto+", tenho "+pessoa.idade+"ano, "+pessoa.altura+", meu peso é "+pessoa.peso+" e, só hoje, eu já caminhei "+pessoa.caminhouQuantosMetros+"metros!";
+
+    if(pessoa.idade === 1){
+        idade = "ano";
     }
-    else if (pessoa.caminhouQuantosMetros === 1){
-        return "Olá, eu sou a "+pessoa.nomeCompleto+", tenho "+pessoa.idade+"anos, "+pessoa.altura+", meu peso é "+pessoa.peso+" e, só hoje, eu já caminhei "+pessoa.caminhouQuantosMetros+"metro!";
+    
+    if(pessoa.caminhouQuantosMetros === 1){
+        metros = "metro"
     }
+
+    return "Olá, eu sou "+sexo+" "+pessoa.nomeCompleto()+" , tenho "+pessoa.idade+" "+idade+" , "+pessoa.altura+", meu peso é "+pessoa.peso+" e, só hoje, eu já caminhei "+pessoa.caminhouQuantosMetros+" "+metros+"!";
 };
 
 // Agora, apresente-se ;)
